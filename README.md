@@ -1,5 +1,11 @@
 # CentosServer
 
+apg must be present on the system, in order to use this script. 
+It is in the Ubuntu18 repo already:
+sudo apt install apg
+If you are using CentOS, you may have to install EPEL, and then
+yum install apg
+
 Dont get rid of usernames.txt. It is useful for the removal of users, and well as the creation.
 
 Create users:
