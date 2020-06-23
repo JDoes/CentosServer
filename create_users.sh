@@ -3,11 +3,16 @@
 ########################
 #Use apg to create user:password pairs, based on the usernames.txt file,
 #and output that as a file named users.txt
+#Change permissions on users.txt and usernames.txt, 
+#so only the user who owns them can do anything with them.
 
 cat usernames.txt | while read i; do
         echo -n "$i:"
         apg -n1
 done > users.txt
+
+chmod 700 users.txt
+chmod 700 usernames.txt
 
 #########################
 #Create the users from the users.txt file, which is the user:password pairs
